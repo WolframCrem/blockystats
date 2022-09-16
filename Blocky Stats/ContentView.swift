@@ -23,7 +23,11 @@ struct ContentView: View {
                 .tabItem{
                     Label("Logs", systemImage: "tray")
                 }
-        }
+            SettingsView()
+                .tabItem{
+                    Label("Settings", systemImage: "gear")
+                }
+        }//.persistentSystemOverlays(.visible)
     }
 }
 
@@ -32,3 +36,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+

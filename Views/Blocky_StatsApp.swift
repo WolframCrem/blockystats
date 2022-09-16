@@ -15,3 +15,4 @@ struct Blocky_StatsApp: App {
         }
     }
 }
+

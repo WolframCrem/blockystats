@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "7B4F2839-BC0C-4D51-B43A-E238FFAFF747"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D63EAD6E-9F89-4279-A0BA-CC273FC8D801"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views/StatsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "D63EAD6E-9F89-4279-A0BA-CC273FC8D801 - 41d678559499e05f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Blocky_Stats.Stats.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;Blocky_Stats.Stats.CodingKeys&gt;"
+                  moduleName = "Blocky Stats"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/ExternalSSD/Development/Blocky%20Stats/Views/StatsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "D63EAD6E-9F89-4279-A0BA-CC273FC8D801 - 7aa11191d7cb8812"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Blocky_Stats.Stats.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "Blocky Stats"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/ExternalSSD/Development/Blocky%20Stats/Views/StatsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

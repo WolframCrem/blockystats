@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0863152904444C002AF0BA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0863142904444C002AF0BA /* SettingsView.swift */; };
 		0CF3407528C65D3000ABF6DE /* Blocky_StatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF3407428C65D3000ABF6DE /* Blocky_StatsApp.swift */; };
 		0CF3407728C65D3000ABF6DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF3407628C65D3000ABF6DE /* ContentView.swift */; };
 		0CF3407928C65D3000ABF6DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CF3407828C65D3000ABF6DE /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C0863142904444C002AF0BA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		0CF3407128C65D3000ABF6DE /* Blocky Stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blocky Stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CF3407428C65D3000ABF6DE /* Blocky_StatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blocky_StatsApp.swift; sourceTree = "<group>"; };
 		0CF3407628C65D3000ABF6DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,7 +101,6 @@
 		0CF3407328C65D3000ABF6DE /* Blocky Stats */ = {
 			isa = PBXGroup;
 			children = (
-				0CF3407428C65D3000ABF6DE /* Blocky_StatsApp.swift */,
 				0CF3407628C65D3000ABF6DE /* ContentView.swift */,
 				0CF3407828C65D3000ABF6DE /* Assets.xcassets */,
 				0CF3407A28C65D3000ABF6DE /* Preview Content */,
@@ -135,8 +136,10 @@
 		0CF3409E28C65D4A00ABF6DE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0C0863142904444C002AF0BA /* SettingsView.swift */,
 				0CF3409F28C65D9100ABF6DE /* StatsView.swift */,
 				0CF340A128C65DB600ABF6DE /* LogsView.swift */,
+				0CF3407428C65D3000ABF6DE /* Blocky_StatsApp.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0863152904444C002AF0BA /* SettingsView.swift in Sources */,
 				0CF3407728C65D3000ABF6DE /* ContentView.swift in Sources */,
 				0CF340A228C65DB600ABF6DE /* LogsView.swift in Sources */,
 				0CF3407528C65D3000ABF6DE /* Blocky_StatsApp.swift in Sources */,
@@ -361,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -415,9 +419,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -436,12 +441,12 @@
 				DEVELOPMENT_TEAM = VPWLLY75HQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Blocky Stats";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortraitUpsideDown;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,12 +471,12 @@
 				DEVELOPMENT_TEAM = VPWLLY75HQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Blocky Stats";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortraitUpsideDown;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
