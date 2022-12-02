@@ -9,26 +9,32 @@ import SwiftUI
 
 
 class ViewModel: ObservableObject {
+    @Published var stopLoop:Bool = false
     @Published var stats: Stats = Stats(Total: 0, Blocked: 0, TopClients: [Gafam(Name: "Loading...", Count: 0)], Gafam: [Gafam(Name: "Loading...", Count: 0)])
     @objc func fetch_stats() {
-        guard let url = URL(string: "https://\(UserDefaults.standard.string(forKey: "endpoint")!)/v1/stats") else {
-            return
-        }
-        let task = URLSession.shared.dataTask(with: url) {data, response, error in
-                
-        if let data = data {
-            do {
-                let decoder = JSONDecoder()
-                let stats = try decoder.decode(Stats.self, from: data)
-                DispatchQueue.main.async {
-                    self.stats = stats;
-                }
-                } catch {
-                    print(error)
+        // check if userdefaults is nil
+        if let endpoint = UserDefaults.standard.array(forKey: "endpoint") {
+            guard let url = URL(string: "https://\(endpoint)/v1/stats") else {
+                return
+            }
+            let task = URLSession.shared.dataTask(with: url) {data, response, error in
+                    
+            if let data = data {
+                do {
+                    let decoder = JSONDecoder()
+                    let stats = try decoder.decode(Stats.self, from: data)
+                    DispatchQueue.main.async {
+                        self.stats = stats;
+                    }
+                    } catch {
+                        print(error)
+                    }
                 }
             }
+            task.resume()
+        } else {
+            stopLoop = true;
         }
-        task.resume()
     }
 }
 
@@ -63,7 +69,7 @@ struct StatsView: View {
                 
                 //top clients box
                 VStack(alignment: .leading) {
-                    Text("Total Clients").font(.system(size: 15)).fontWeight(Font.Weight.semibold).foregroundColor(.white).opacity(0.6).padding(.leading, 5)
+                    Text("Top Clients").font(.system(size: 15)).fontWeight(Font.Weight.semibold).foregroundColor(.white).opacity(0.6).padding(.leading, 5)
                     HStack {
                         ScrollView {
                             // create all clients
@@ -106,10 +112,14 @@ struct StatsView: View {
             viewModel.fetch_stats()
             // start timet to refresh every 10 seconds
             //TODO: make it configurable
-            Timer.scheduledTimer(withTimeInterval: 10, repeats: true, block: { _ in
-                viewModel.fetch_stats()
-            })
-        }
+            if (viewModel.stopLoop != true) {
+                Timer.scheduledTimer(withTimeInterval: 10, repeats: true, block: { _ in
+                    viewModel.fetch_stats()
+                })
+            }
+        }.alert(isPresented: $viewModel.stopLoop, content: {
+            Alert(title: Text("Error"), message: Text("endpoint has not been set"), dismissButton: .default(Text("OK")) )
+        })
     }
 }
 
